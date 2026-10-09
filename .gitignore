@@ -1,0 +1,16 @@
+node_modules/
+data/
+.env
+.env.*
+!.env.example
+.vercel
+screenshots/
+# never commit secrets, private feed data, or real snapshots
+fixtures/
+*.ics
+*.log
+*.pid
+.live-password
+.DS_Store
+data/resume*.json
+data/resume-tips-cache.json

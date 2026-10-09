@@ -1,0 +1,44 @@
+{
+  "source": "example",
+  "label": "Example resume (replace with your own bullets)",
+  "note": "Edit this file with your own resume bullets so the Jobs tab can suggest tailoring tips. Keep each bullet as one line of text. This example is fictional.",
+  "bullets": [
+    {
+      "id": "b1",
+      "company": "Example Corp",
+      "role": "Product Marketing Associate",
+      "text": "Launched a new self-serve plan with pricing research and a three-channel campaign, growing trial sign-ups 25% in one quarter."
+    },
+    {
+      "id": "b2",
+      "company": "Example Corp",
+      "role": "Product Marketing Associate",
+      "text": "Ran 12 customer interviews and turned the findings into positioning and a sales one-pager used by a 20-person team."
+    },
+    {
+      "id": "b3",
+      "company": "Sample Startup",
+      "role": "Business Analyst",
+      "text": "Built a SQL and spreadsheet dashboard tracking weekly retention, cutting reporting time from a day to an hour."
+    },
+    {
+      "id": "b4",
+      "company": "Sample Startup",
+      "role": "Business Analyst",
+      "text": "Partnered with engineering to prioritize a backlog of 40 feature requests using impact and effort scoring."
+    },
+    {
+      "id": "b5",
+      "company": "Sample Startup",
+      "role": "Business Analyst",
+      "text": "Wrote a weekly competitive brief on three rival products that leadership used to shape the next quarter's roadmap."
+    }
+  ],
+  "education": "Your degree, school and graduation year",
+  "skills": [
+    "SQL",
+    "Excel",
+    "Figma",
+    "Market research"
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dayline · First-time setup</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#5b3d9b">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="setup-page">
+  <main class="setup-card">
+    <div class="setup-head"><img src="/icon.svg" alt="" width="40" height="40"><div><h1>First-time setup</h1><p class="muted">Dayline creates its Notion databases for you. About 2 minutes.</p></div></div>
+    <p id="setupNote" class="setup-note" hidden></p>
+
+    <section class="setup-step">
+      <h2><span class="num">1</span> Your Notion integration token</h2>
+      <p id="tokenOk" class="hint" hidden>✓ Using the NOTION_TOKEN you set in Vercel.</p>
+      <div id="tokenBox">
+        <p class="hint">Paste the “Internal integration secret” from notion.so/profile/integrations. It is only used for this setup and is not saved by Dayline. (You still need to add it to Vercel as NOTION_TOKEN.)</p>
+        <input id="token" type="password" class="text-input" placeholder="ntn_…" autocomplete="off" spellcheck="false">
+      </div>
+    </section>
+
+    <section class="setup-step">
+      <h2><span class="num">2</span> Pick the page to hold your Dayline databases</h2>
+      <p class="hint">In Notion, open the page, click <b>•••</b> (top right) › <b>Connections</b> and add your integration first. Then:</p>
+      <div class="row-btns"><button type="button" class="btn" id="findPages">Show pages I shared</button></div>
+      <ul id="pages" class="setup-pages"></ul>
+      <p class="hint">…or paste the page link:</p>
+      <input id="pageLink" class="text-input" placeholder="https://www.notion.so/My-Dayline-…" autocomplete="off" spellcheck="false">
+    </section>
+
+    <section class="setup-step">
+      <h2><span class="num">3</span> Create the databases</h2>
+      <p class="hint">Creates: To Do, Recruiting pipeline, Brainstorm, People, Touch points and App data (all named “Dayline · …”). Safe to click again: anything already made under that page is reused.</p>
+      <div class="row-btns"><button type="button" class="btn primary" id="create">Create my databases</button><button type="button" class="btn ghost" id="find">I already did this · find them</button></div>
+      <p id="setupError" class="form-error" role="alert" hidden></p>
+    </section>
+
+    <section class="setup-step" id="envStep" hidden>
+      <h2><span class="num">4</span> Paste these into Vercel, then redeploy</h2>
+      <p class="hint">Vercel › your project › <b>Settings</b> › <b>Environment Variables</b>. Add each line (name = left of “=”, value = right). Then <b>Deployments</b> › latest › <b>•••</b> › <b>Redeploy</b>.</p>
+      <textarea id="env" class="textarea setup-env" readonly rows="7"></textarea>
+      <div class="row-btns"><button type="button" class="btn primary" id="copy">Copy all</button><span id="copied" class="hint" hidden>Copied ✓</span></div>
+    </section>
+  </main>
+  <script src="/setup.js"></script>
+</body>
+</html>
