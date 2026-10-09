@@ -56,7 +56,7 @@ if (config.mode === 'fixture') {
   if (config.brainstormEnabled) brainstorm = createFileBrainstorm({ file: config.fixture.brainstormFile });
   store = storeFromConfig(config);
   if (config.networkEnabled) network = createFileNetwork({ file: config.fixture.networkFile, seed: () => sampleNetwork(dateKey(config.now || new Date(), config.tz)) });
-  if (!feeds.length && fs.existsSync(config.fixture.feedsFile)) {
+  if (fs.existsSync(config.fixture.feedsFile)) { // demo mode always uses the fake calendars, never real feeds
     const list = JSON.parse(fs.readFileSync(config.fixture.feedsFile, 'utf8'))
       .map((f) => ({ ...f, url: pathToFileURL(path.join(path.dirname(config.fixture.feedsFile), f.file)).href }));
     feeds = parseFeeds(JSON.stringify(list));
